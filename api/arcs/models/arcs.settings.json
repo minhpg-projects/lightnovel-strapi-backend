@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "arcs",
+  "info": {
+    "name": "Arcs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "chapters": {
+      "collection": "chapters"
+    }
+  }
+}

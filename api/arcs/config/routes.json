@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/arcs",
+      "handler": "arcs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/arcs/count",
+      "handler": "arcs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/arcs/:id",
+      "handler": "arcs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/arcs",
+      "handler": "arcs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/arcs/:id",
+      "handler": "arcs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/arcs/:id",
+      "handler": "arcs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

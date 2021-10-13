@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chapters",
+  "info": {
+    "name": "Chapters"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "name": "Authors",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "unique": true,
+      "private": true,
+      "required": true
+    },
+    "password": {
+      "type": "password",
+      "private": true,
+      "unique": false,
+      "required": true
+    },
+    "profile_picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "novels": {
+      "via": "author",
+      "collection": "novels"
+    },
+    "groups": {
+      "via": "authors",
+      "collection": "groups"
+    }
+  }
+}

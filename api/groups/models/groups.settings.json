@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "groups",
+  "info": {
+    "name": "Groups",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "authors": {
+      "collection": "authors",
+      "via": "groups",
+      "dominant": true
+    },
+    "novels": {
+      "via": "group",
+      "collection": "novels"
+    }
+  }
+}

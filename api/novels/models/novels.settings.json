@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "novels",
+  "info": {
+    "name": "Novels",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "alternate_title": {
+      "type": "string"
+    },
+    "alternate_title_2": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "author": {
+      "via": "novels",
+      "model": "authors"
+    },
+    "group": {
+      "via": "novels",
+      "model": "groups"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "poster": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "views": {
+      "type": "biginteger",
+      "required": false,
+      "default": "0",
+      "min": "0"
+    },
+    "rating": {
+      "type": "decimal",
+      "max": 5,
+      "min": 0,
+      "default": 0
+    },
+    "likes": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "arcs": {
+      "collection": "arcs"
+    },
+    "categories": {
+      "collection": "categories",
+      "via": "novel"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
